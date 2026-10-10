@@ -1,0 +1,33 @@
+name: "service"  # Имя Bento
+service: "service:PlantSegmentator"  # Точка входа: модуль service.py, класс PlantSegmentator
+
+# Служебные опции
+description: "ML inference service for smp model"
+include:
+  - "service.py"
+  - "src/"
+  - "req.txt"
+  - "checkpoint.pth"
+exclude:
+  - "__pycache__/"
+
+python:
+  requirements_txt: "req.txt"
+  # CPU-сборка torch: без неё на linux/x86_64 ставится CUDA-версия на несколько ГБ
+  extra_index_url:
+    - "https://download.pytorch.org/whl/cpu"
+
+# Docker-конфиг для containerize
+docker:
+  python_version: "3.11"
+  # base_image: "python:3.11-slim"       # Базовый slim-образ
+
+  system_packages:                     # Системные deps
+    - libxcb1
+    - libx11-6
+    - libxext6
+    - libxrender1
+    - libgl1
+    - libglib2.0-0
+
+  distro: "debian"                     # Для system_packages

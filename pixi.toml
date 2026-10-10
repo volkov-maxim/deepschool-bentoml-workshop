@@ -1,0 +1,23 @@
+[workspace]
+channels = ["conda-forge"]
+name = "deepschool-bentoml-workshop"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.12.6.*"
+pydantic = "==2.12.0"
+typing_extensions = "==4.15.0"
+pip = ">=26.2.1,<27"
+
+[pypi-dependencies]
+torch = "==2.10.0"
+torchvision = "==0.25.0"
+numpy = "==2.4.3"
+bentoml = "==1.4.36"
+pillow = "==12.1.1"
+segmentation-models-pytorch = "==0.5.0"
+albumentations = "==2.0.8"
+matplotlib = "==3.10.8"

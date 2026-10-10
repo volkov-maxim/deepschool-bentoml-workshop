@@ -1,0 +1,18 @@
+# В образ попадают только код сервиса, зависимости и веса
+.git
+.gitignore
+**/.DS_Store
+**/__pycache__
+.vscode
+.pixi
+.venv
+venv
+env
+data
+*.png
+*.jpg
+pixi.*
+request_example.py
+README.md
+Dockerfile
+.dockerignore

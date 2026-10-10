@@ -1,0 +1,8 @@
+torch==2.10.0
+torchvision==0.25.0
+numpy==2.4.3
+bentoml==1.4.36
+Pillow==12.1.1
+segmentation-models-pytorch==0.5.0
+albumentations==2.0.8
+matplotlib==3.10.8
